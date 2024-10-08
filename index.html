@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyOn Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-item h3 {
+            cursor: pointer;
+            padding: 10px;
+            background: #0073e6;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .faq-item p {
+            display: none;
+            padding: 10px;
+            background: #e0e0e0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>StudyOn Support</h1>
+
+        <section id="description">
+            <h2>About StudyOn</h2>
+            <p>StudyOn is a productivity app designed to help you manage your tasks efficiently using a combination of a to-do list and the Pomodoro timer technique. Organize your day, break tasks into manageable intervals, and stay focused with short breaks in between. Perfect for students, professionals, or anyone who wants to optimize their productivity and time management.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions (FAQ)</h2>
+
+            <div class="faq-item">
+                <h3>How do I create a task in StudyOn?</h3>
+                <p>To create a task, simply go to the 'To-Do' section and tap the 'Add Task' button. Enter the task details and set a priority level. You can also assign a Pomodoro session to each task if needed.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is the Pomodoro timer and how does it work?</h3>
+                <p>The Pomodoro technique is a time management method that uses 25-minute work intervals followed by a 5-minute break. After completing four Pomodoros, you can take a longer break of 15-30 minutes. This helps in maintaining focus and avoiding burnout.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I customize the Pomodoro intervals?</h3>
+                <p>Yes! In the settings, you can adjust the length of both the work and break intervals to suit your personal preferences.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How can I track my productivity over time?</h3>
+                <p>StudyOn provides a productivity report that summarizes how many Pomodoro sessions you've completed, your completed tasks, and your daily performance. You can view this report in the 'Stats' section of the app.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What happens if I miss a Pomodoro session?</h3>
+                <p>If you miss a Pomodoro session, you can either reset the timer or continue the task without taking a break. The app will keep track of your missed Pomodoros and adjust your task timing accordingly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is StudyOn available offline?</h3>
+                <p>Yes, StudyOn can be used offline. All tasks and Pomodoro sessions will be synced with the cloud once you reconnect to the internet.</p>
+            </div>
+
+        </section>
+    </div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item h3');
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
